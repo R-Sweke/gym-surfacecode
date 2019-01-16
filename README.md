@@ -1,8 +1,8 @@
-###  _gym_surfacecode_
+###  gym_surfacecode
 
 A surface code environment aimed at facilitating the development of decoders (decoding agents) for fault tolerant quantum computing.
 
-The environment provided here was previously used for the development of DeepQ decoders - see this <a href="https://arxiv.org/pdf/1810.07207.pdf"> repository</a> for details. To get started, and for an introduction to fault-tolerant quantum computing, and particularly the surface code, we highly suggest reading the associated manuscript <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>.
+The environment provided here was previously used for the development of <a href="https://github.com/R-Sweke/DeepQ-Decoding"> deepQ decoders</a> . To get started, and for an introduction to fault-tolerant quantum computing, and particularly the surface code, we highly suggest reading the associated manuscript <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>.
 
 Additionally, if you use this environment, or any of the code provided here, please cite above work as follows:
 
