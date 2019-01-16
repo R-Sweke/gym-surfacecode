@@ -49,10 +49,10 @@ my_env = SurfaceCodeEnv(p_phys=0.01, p_meas=0.01, error_model="DP", use_Y=True, 
 
 The attributes which need to be specified are as follows:
 
-    1. p_phys and p_meas: The physical and measurement error probabilities respectively. 
-    2. error_model: A string in ["DP","X"] specifying whether a depolarizing or bit flip channel should be simulated.
-    3. use_Y: A boolean indicating whether Pauli Y flips are valid actions.
-    4: volume_depth: A positive integer specifying the number of syndrome measurements performed sequentially in each syndrome extraction.
+1. p_phys and p_meas: The physical and measurement error probabilities respectively. 
+2. error_model: A string in ["DP","X"] specifying whether a depolarizing or bit flip channel should be simulated.
+3. use_Y: A boolean indicating whether Pauli Y flips are valid actions.
+4: volume_depth: A positive integer specifying the number of syndrome measurements performed sequentially in each syndrome extraction.
 
 For more details, we again highly suggest starting by reading <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>. In particular, please note that at the moment the distance of the surface code is fixed to distance-5 - we are working at removing this restriction!
 
