@@ -1,6 +1,6 @@
 ### _surfacecode_
 
-#### A distance-5 surface code environment aimed at facilitating the development of decoding agents for fault tolerant quantum computing.
+A surface code environment aimed at facilitating the development of decoding agents for fault tolerant quantum computing.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/6330346/51264006-bfd9ae80-19b5-11e9-8d4c-fb5b757ade76.png" width="600">
@@ -54,7 +54,7 @@ The attributes which need to be specified are as follows:
     3. use_Y: A boolean indicating whether Pauli Y flips are valid actions.
     4: volume_depth: A positive integer specifying the number of syndrome measurements performed sequentially in each syndrome extraction.
 
-For more details, we again highly suggest starting by reading <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>.
+For more details, we again highly suggest starting by reading <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>. In particular, please note that at the moment the distance of the surface code is fixed to distance-5 - we are working at removing this restriction!
 
 The actions which are allowed depend on the setting of the attributes:
 
