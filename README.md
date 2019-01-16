@@ -1,6 +1,6 @@
-###  surfacecode
+### _surfacecode_
 
-A distance-5 surface code environment aimed at facilitating the development of decoders (decoding agents) for fault tolerant quantum computing.
+#### A distance-5 surface code environment aimed at facilitating the development of decoding agents for fault tolerant quantum computing.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/6330346/51264006-bfd9ae80-19b5-11e9-8d4c-fb5b757ade76.png" width="600">
