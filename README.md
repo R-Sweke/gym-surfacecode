@@ -66,19 +66,19 @@ At any given instant the state of the environment is a [volume_depth + num_actio
 As an example, for depolarizing noise (i.e. error_model = "DP"), with use_Y=False and volume_depth = 3, the state of the environment would be as follows:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/6330346/51263374-6f158600-19b4-11e9-8f87-517200f0698f.png" width="200">
+<img src="https://user-images.githubusercontent.com/6330346/51263374-6f158600-19b4-11e9-8f87-517200f0698f.png" width="700">
 </p>  
 
 with the syndrome layers utilizing the following encoding:
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/6330346/51263373-6f158600-19b4-11e9-84d6-d83196b900fa.png">
+<img src="https://user-images.githubusercontent.com/6330346/51263373-6f158600-19b4-11e9-84d6-d83196b900fa.png" width="700">
 </p>  
 
 and the action-history layers utilizing this encoding.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/6330346/51263376-6f158600-19b4-11e9-9e81-206f7f25f13d.png">
+<img src="https://user-images.githubusercontent.com/6330346/51263376-6f158600-19b4-11e9-9e81-206f7f25f13d.png" width="700">
 </p>  
 
 
