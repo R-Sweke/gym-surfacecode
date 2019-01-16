@@ -45,7 +45,7 @@ class SurfaceCodeEnv(gym.Env):
 	"""
 
 	# Indicate that currently no render modes are available
-	#metadata = {'render.modes': []}
+	metadata = {'render.modes': []}
 
 	# ----------------- Required gym.Env methods ---------------------------------------------------------------------
 
@@ -63,10 +63,8 @@ class SurfaceCodeEnv(gym.Env):
 			self.num_actions = self.d**2 + 1
 			self.n_action_layers = 1
 			static_decoder_path = pkg_resources.resource_filename('gym_surfacecode', 'envs/referee_decoders/X_decoder')
-			#static_decoder_path = os.path.join(os.getcwd(),"referee_decoders/X_decoder")
 		elif error_model == "DP":
 			static_decoder_path = pkg_resources.resource_filename('gym_surfacecode', 'envs/referee_decoders/DP_decoder')
-			#static_decoder_path = os.path.join(os.getcwd(),"referee_decoders/DP_decoder")
 			if use_Y:
 				self.num_actions = 3*self.d**2 + 1
 				self.n_action_layers = 3
