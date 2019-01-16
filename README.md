@@ -52,20 +52,20 @@ The attributes which need to be specified are as follows:
 1. p_phys and p_meas: The physical and measurement error probabilities respectively. 
 2. error_model: A string in ["DP","X"] specifying whether a depolarizing or bit flip channel should be simulated.
 3. use_Y: A boolean indicating whether Pauli Y flips are valid actions.
-4: volume_depth: A positive integer specifying the number of syndrome measurements performed sequentially in each syndrome extraction.
+4. volume_depth: A positive integer specifying the number of syndrome measurements performed sequentially in each syndrome extraction.
 
 For more details, we again highly suggest starting by reading <a href="https://arxiv.org/pdf/1810.07207.pdf">Reinforcement Learning Decoders for Fault-Tolerant Quantum Computation</a>. In particular, please note that at the moment the distance of the surface code is fixed to distance-5 - we are working at removing this restriction!
 
 The actions which are allowed depend on the setting of the attributes:
 
-    1.If the error model is "X" then any integer in the set [0,25] is a valid action. The integers [0,24] each represent a bit flip on a particular data qubit (labelled sequentially row wise), while the action 25 is the _request new syndrome_ action. In this case num_action_layers = 1.
-    2. If the error model is "DP" and use_Y is True, then any integer in the set [0,75] is a valid action, with actions in [0,24], [25,49], [50,74] indicating X,Y, or Z flips on the specified qubit respectively, with 75 being the _request new syndrome_ action. In this case num_action_layers = 3.
-    2. If the error model is "DP" and use_Y is False, then any integer in the set [0,50] is a valid action, with actions in [0,24], [25,49] indicating X or Z flips on the specified qubit respectively, with 50 being the _request new syndrome_ action. In this case num_action_layers = 2.
+1. If the error model is "X" then any integer in the set [0,25] is a valid action. The integers [0,24] each represent a bit flip on a particular data qubit (labelled sequentially row wise), while the action 25 is the _request new syndrome_ action. In this case num_action_layers = 1.
+2. If the error model is "DP" and use_Y is True, then any integer in the set [0,75] is a valid action, with actions in [0,24], [25,49], [50,74] indicating X,Y, or Z flips on the specified qubit respectively, with 75 being the _request new syndrome_ action. In this case num_action_layers = 3.
+3. If the error model is "DP" and use_Y is False, then any integer in the set [0,50] is a valid action, with actions in [0,24], [25,49] indicating X or Z flips on the specified qubit respectively, with 50 being the _request new syndrome_ action. In this case num_action_layers = 2.
 
 At any given instant the state of the environment is a [volume_depth + num_action_layers,11,11] boolean array, where:
 
-    1. The first volume_depth slices of the tensor encode the most recently obtained syndromes.
-    2. The final num_action_layers slices of the tensor encode the history of actions taken since the most recent syndrome was obtained.
+1. The first volume_depth slices of the tensor encode the most recently obtained syndromes.
+2. The final num_action_layers slices of the tensor encode the history of actions taken since the most recent syndrome was obtained.
 
 As an example, for depolarizing noise (i.e. error_model = "DP"), with use_Y=False and volume_depth = 3, the state of the environment would be as follows:
 
